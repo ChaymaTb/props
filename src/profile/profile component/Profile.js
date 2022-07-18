@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 export const Profile = ({fullName,bio,profession}) => {
 return (
     <div className='Profile'>
-        <h2>FullName: {fullName}</h2>
-        <h3>My bio: {bio}</h3>
+        <h2 style={{color: "red"}}>FullName: {fullName}</h2>
+        <h3 style={{backgroundColor: "red"}}>My bio: {bio}</h3>
         <h4>Profession: {profession}</h4>
     </div>
 )
@@ -14,7 +14,6 @@ return (
 export const Image = (props) => {
 return (
     <div className="image">
-        <img src="./photo/ch.jpg" alt="Chayma" />
         {props.children}
     </div>
 )
@@ -22,7 +21,7 @@ return (
 
 export const HandleMe = props => {
     return (
-    <button onClick={() => props.alertMyInput(`Chayma`)}>
+    <button onClick={() => props.alertMyInput(props.fullName)}>
         ClickMe
     </button>
     );

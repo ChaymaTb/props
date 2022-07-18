@@ -7,7 +7,9 @@ function App() {
   return (
     <div className="App">
       <Profile fullName="Chayma Taba" bio="From Gabes" profession="Web Developper"/>
-      <Image />
+      <Image >
+        <img src="./photo/ch.jpg"/>
+      </Image>
       <HandleMe fullName="Chayma Taba" alertMyInput={alertMyInput}/>
     </div>
   );
